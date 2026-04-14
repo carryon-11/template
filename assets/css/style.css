@@ -202,9 +202,24 @@ p { margin: 0; }
 .hero-desc { font-size: 17px; opacity: 0.9; margin-bottom: 40px; }
 .hero-inner .btn-more { border-color: #fff; color: #fff; }
 .hero-inner .btn-more:hover { background: #fff; color: var(--c-text); }
+.hero-pagination {
+  position: absolute !important;
+  bottom: 50px !important; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 14px;
+  z-index: 5;
+}
+.hero-pagination .swiper-pagination-bullet {
+  width: 12px; height: 12px; background: rgba(255,255,255,0.4);
+  opacity: 1; cursor: pointer; transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.hero-pagination .swiper-pagination-bullet-active {
+  background: #fff; width: 36px; border-radius: 999px;
+}
 .hero-scroll {
   position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
   width: 1px; height: 60px; background: rgba(255,255,255,0.3); z-index: 2;
+  display: none;
 }
 .hero-scroll span {
   position: absolute; top: 0; left: 0; width: 100%; height: 30%;

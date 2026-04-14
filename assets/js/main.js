@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
       speed: 1400,
       loop: true,
       allowTouchMove: false,
-      autoplay: { delay: 4500, disableOnInteraction: false }
+      autoplay: { delay: 4500, disableOnInteraction: false },
+      pagination: {
+        el: '.hero-pagination',
+        clickable: true
+      }
     });
 
   }
