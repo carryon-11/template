@@ -254,8 +254,7 @@ p { margin: 0; }
   position: relative; z-index: 1; padding: 36px;
   color: #fff;
 }
-.slide-text h3 { font-size: 28px; margin-bottom: 14px; }
-.slide-text p { font-size: 14px; opacity: 0.9; margin-bottom: 20px; line-height: 1.6; }
+.slide-text h3 { font-size: 28px; margin-bottom: 20px; }
 .slide-text .btn-more { border-color: #fff; color: #fff; }
 .slide-text .btn-more:hover { background: #fff; color: var(--c-text); }
 
