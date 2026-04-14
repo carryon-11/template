@@ -37,14 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
       autoplay: { delay: 4500, disableOnInteraction: false }
     });
 
-    new Swiper('.tourSwiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 24,
-      loop: true,
-      allowTouchMove: false,
-      speed: 5000,
-      autoplay: { delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false }
-    });
   }
 
   // ===== Scroll fade-in (sections) =====
@@ -59,15 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.sec').forEach((s) => io.observe(s));
 
-  // ===== Specialty cards: re-trigger on every entry =====
-  const specialtyCards = document.getElementById('specialtyCards');
-  if (specialtyCards) {
-    const cardIo = new IntersectionObserver((entries) => {
+  // ===== Re-triggering observers (specialty cards & doctor img) =====
+  const retriggerTargets = [
+    { el: document.getElementById('specialtyCards'), threshold: 0.25 },
+    { el: document.getElementById('doctorImg'), threshold: 0.3 }
+  ];
+  retriggerTargets.forEach(({ el, threshold }) => {
+    if (!el) return;
+    const obs = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) specialtyCards.classList.add('animate');
-        else specialtyCards.classList.remove('animate');
+        if (e.isIntersecting) el.classList.add('animate');
+        else el.classList.remove('animate');
       });
-    }, { threshold: 0.25 });
-    cardIo.observe(specialtyCards);
-  }
+    }, { threshold });
+    obs.observe(el);
+  });
 });

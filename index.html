@@ -191,7 +191,7 @@
         <li><span>학회</span><p>대한한의학회 정회원 · 척추신경추나의학회 정회원</p></li>
       </ul>
     </div>
-    <div class="col-img">
+    <div class="col-img doctor-img" id="doctorImg">
       <img src="assets/images/placeholder-square.svg" alt="">
     </div>
   </div>
@@ -233,51 +233,49 @@
     <p class="eyebrow">ONA KOREAN MEDICAL CLINIC</p>
     <h2>[브랜드명] 한의원 둘러보기</h2>
   </div>
-  <div class="tour-slider">
-    <div class="swiper tourSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-        <div class="swiper-slide"><div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div></div>
-      </div>
+  <div class="tour-marquee">
+    <div class="tour-track">
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <!-- duplicate for seamless loop -->
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
+      <div class="tour-card" aria-hidden="true"><img src="assets/images/placeholder-branch.svg" alt=""></div>
     </div>
   </div>
 </section>
 
-<!-- ============ SEC 07 — 분원 정보 ============ -->
-<section class="sec sec-branch">
-  <div class="title-area center">
-    <h2>오시는 길</h2>
-  </div>
-  <div class="branch-grid">
-    <div class="branch-card">
-      <img src="assets/images/placeholder-wide.svg" alt="">
-      <div class="branch-body">
-        <h4>[브랜드명] 한의원 [지점1]</h4>
-        <p>주소: [도시] [구] [도로명주소]</p>
-        <p>전화: 000-0000-0000</p>
-        <p>진료시간: 평일 09:00 ~ 19:00 / 토 09:00 ~ 13:00</p>
-      </div>
+<!-- ============ SEC 06 — 오시는 길 / 진료 시간 ============ -->
+<section class="sec sec-location">
+  <div class="sec-wrap location-grid">
+    <div class="location-map">
+      <img src="assets/images/placeholder-wide.svg" alt="지도 영역 (이미지/지도 API 삽입)">
     </div>
-    <div class="branch-card">
-      <img src="assets/images/placeholder-wide.svg" alt="">
-      <div class="branch-body">
-        <h4>[브랜드명] 한의원 [지점2]</h4>
-        <p>주소: [도시] [구] [도로명주소]</p>
-        <p>전화: 000-0000-0000</p>
-        <p>진료시간: 평일 09:00 ~ 19:00 / 토 09:00 ~ 13:00</p>
+    <div class="location-info">
+      <div class="info-block">
+        <h2>오시는 길</h2>
+        <ul class="info-list">
+          <li><span>주소</span><p>[도시] [구] [도로명주소]</p></li>
+          <li><span>지하철</span><p>[OO역] OO번 출구에서 도보 5분</p></li>
+          <li><span>버스</span><p>[OO정류장] 하차 / 마을버스 OOO</p></li>
+          <li><span>주차</span><p>건물 내 전용 주차장 이용 가능</p></li>
+        </ul>
       </div>
-    </div>
-    <div class="branch-card">
-      <img src="assets/images/placeholder-wide.svg" alt="">
-      <div class="branch-body">
-        <h4>[브랜드명] 한의원 [지점3]</h4>
-        <p>주소: [도시] [구] [도로명주소]</p>
-        <p>전화: 000-0000-0000</p>
-        <p>진료시간: 평일 09:00 ~ 19:00 / 토 09:00 ~ 13:00</p>
+      <div class="info-block">
+        <h2>진료 시간</h2>
+        <ul class="info-list">
+          <li><span>평일</span><p>09:00 ~ 19:00</p></li>
+          <li><span>토요일</span><p>09:00 ~ 13:00</p></li>
+          <li><span>점심시간</span><p>13:00 ~ 14:00</p></li>
+          <li><span>휴진</span><p>일요일 / 공휴일</p></li>
+        </ul>
       </div>
     </div>
   </div>
